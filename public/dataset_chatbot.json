@@ -1,0 +1,200 @@
+{"intents":
+  [
+    {
+      "tag":"greeting",
+      "input":["hello","hallo","hai","hi","Selamat pagi","Selamat siang","Selamat sore","Selamat malam","Halo, bot!","Permisi"],
+      "responses":[
+          "Hi, ada yang bisa coddy bantu?",
+          "Hallo, apa kamu butuh bantuan?",
+          "Hai, ada yang dapat coddy bantu?",
+          "Hallo, ada yang bisa coddy bantu?",
+          "Hello, butuh bantuan?",
+          "Hai coddy disini, ada yang bisa coddy bantu?",
+          "Hallo, ada yang ingin kamu tanyakan?",
+          "Hai, ada yang ingin kamu tanyakan?"
+        ]
+    },
+    {
+      "tag":"goodbye",
+      "input":["Thank you","Thanks","Terima kasih","Terima kasih informasinya","Terima kasih atas bantuannya","Selamat tinggal","Bye"],
+      "responses":[
+          "Okay, Bye",
+          "Okay, sampai jumpa kembali",
+          "Tentu, kapan saja kamu butuhkan bantuan, silakan kembali",
+          "Selamat tinggal! Jika kamu memiliki pertanyaan lain, jangan ragu untuk bertanya yaa",
+          "Okay, semoga hari mu menyenangkan",
+          "Terima kasih sudah menggunakan layanan kami. Selamat tinggal",
+          "Sampai jumpa lain waktu. Mohon beri tahu jika kamu perlu bantuan lainnya",
+          "Goodbye"
+        ]
+    },
+    {
+      "tag":"penanaman_padi",
+      "input":["bagaimana cara menanam padi yang benar?","gimana cara menanam padi yang benar?","Bagaimana cara menanam padi?", "gimana cara menanam padi?", "berikan langkah - langkah menanam padi!", "cara menanam padi"],
+      "responses":[
+          "Baik sobat coddy, berikut ini merupakan langkah atau cara menanam padi: 1) Belilah bibit padi dari toko yang menyuplai bahan berkebun atau bertani. 2) Pilihlah lokasi untuk menanam padi. Pastikan tanah pada area Anda bercocok tanam mengandung asam yang sedikit untuk hasil yang terbaik. 3) Kumpulkan 1 atau 2 ons (28.5 sampai 56.5 g) bibit padi untuk ditanam. Rendam bibit di dalam air untuk menyiapkan penanamannya. Biarkan terendam selama 12 jam namun tidak lebih dari 36 jam. Pisahkan bibit dari air setelahnya. 4) Tanamlah bibit padi ke dalam tanah, selama musim gugur atau musim semi."
+        ]
+    },
+    {
+      "tag":"pemeliharaan_bibit_padi",
+      "input":["bagaimana cara memelihara bibit padi?","bagaimana cara merawat bibit padi?","gimana cara merawat bibit padi?","bagaimana cara menjaga bibit padi?", "cara merawat bibit padi"],
+      "responses":[
+          "Baik sobat coddy, berikut ini adalah cara untuk merawat bibit padi: 1) Isilah keranjang atau petak kebun dengan setidaknya 2 inci (5.1 cm) air. menjaga tanah tetap lembab sudah cukup dan tidak perlu tanah tersebut sampai terendam air. 2) Amati banyaknya air pada area bercocok tanam, jagalah tanah agar tetap basah. 3) Minimalkan bibit padi atau perluas area bercocok tanam untuk mencegah tanaman yang berdesakan. 4) Tunggulah sampai benih tumbuh dewasa."
+        ]
+    },
+    {
+      "tag":"memanen_padi",
+    "input":["cara memanen padi?","berikan cara memanen padi","bagaimana cara memanen padi?","gimana sih caranya memanen padi?","bagaimana cara memanen padi yang baik dan benar?","bagaimana cara memanen padi yang benar?"],
+      "responses":[
+          "Baik sobat coddy, berikut ini cara memanen padi: 1) Potonglah batangnya dan biarkan mengering. 2) Panggang atau jemur mereka pada suhu 180°F (82°C) selama satu jam. 3) Pisahkan biji padi dari kulitnya."
+        ]
+    },
+    {
+      "tag":"gejala_penyakit_bacterial_leaf_blight",
+      "input":["gejala penyakit bacterical leaf blight?","Apa gejala penyakit Bacterial Leaf Blight pada daun padi?","Berikan gejala daun padi yang terjangkit penyakit Bacterial Leaf Blight?","Seperti apa daun padi yang terkena penyakit Bacterial Leaf Blight?","Apa ciri daun padi yang terkena penyakit Bacterial Leaf Blight?", "Bagaimana Cara Identifikasi Gejala Bacterial Leaf Blight pada Tanaman Secara Visual"],
+      "responses":[
+        "Gejala pada penyakit Bacterial Leaf Blight adalah bercak berair pada daun yang kemudian berubah warna menjadi coklat. Bercak-bercak ini membesar dan menggabung, membentuk lesi besar yang mengering. Daun yang terinfeksi dapat mengalami nekrosis (kematian jaringan), dan akhirnya dapat terjatuh"
+      ]
+    },
+    {
+      "tag":"penyebab_penyakit_bacterial_leaf_blight",
+      "input":["penyebab penyakit bacterial leaf blight?","Disebabkan oleh apa Penyakit Bacterial Leaf Blight","Apa yang menjadi penyebab utama penyakit Bacterial Leaf Blight pada tanaman?","apa penyebab penyakit Bacterial Leaf Blight?","Penyakit Bacterial Leaf Blight disebabkan oleh apa?"],
+      "responses":[
+        "Penyakit Bacterial Leaf Blight disebabkan oleh bakteri Xanthomonas oryzae pv.oryzae (Xoo)"
+      ]
+    },
+    {
+      "tag":"penyebaran_penyakit_bacterial_leaf_blight",
+      "input":["Penyebaran penyakit Bacterial Leaf Blight? ","Bagaimana mekanisme penularan Bacterial Leaf Blight dari tanaman yang terinfeksi ke tanaman sehat di sekitarnya?","Bagaimana penyebaran penyakit Bacterial Leaf Blight?","Penyakit Bacterial Leaf Blight disebarkan oleh?","Bagaimana cara penyebaran Bacterial Leaf Blight terjadi di antara tanaman dalam satu area pertanian?"],
+      "responses":[
+        "Penyakit Bacterial Leaf Blight menyebar melalui air hujan, angin, kontak langsung, atau alat yang terkontaminasi."
+      ]
+    },
+    {
+      "tag":"pengendalian_penyakit_bacterial_leaf_blight",
+      "input":["pengendalian penyakit bacterial leaf blight?","Bagaimana praktik pengendalian hama dan penyakit di lahan pertanian yang dapat membantu mengurangi penyebaran penyakit Bacterial Leaf Blight?","bagaimana cara mengendalikan padi yang terkena penyakit Bacterial Leaf Blight?"],
+      "responses":[
+        "Pengendalian penyakit Bacterial Leaf Blight dilakukan dengan cara menggunakan varietas padi yang tahan penyakit, sanitasi kebun yang baik, pengelolaan air, dan penerapan praktik pertanian yang sehat."
+      ]
+    },
+    {
+      "tag":"gejala_penyakit_brown_spot",
+      "input":["gejala penyakit brown spot?","Apa gejala penyakit Brown Spot pada daun padi?","Berikan gejala daun padi yang terjangkit penyakit Brown Spot?","seperti apa daun padi yang terkena penyakit Brown Spot?","Apa ciri daun padi yang terkena penyakit Brown Spot?","Bagaimana cara identifikasi gejala brown spot pada tanaman secara visual"],
+      "responses":[
+        "Daun padi yang terkena penyakit Brown Spot mempunyai bercak coklat kehitaman pada daun padi, awalnya kecil dan lonjong, seiring perkembangan kemudian membesar membentuk area yang lebih luas. Daun yang terinfeksi akan mengering, menguning, dan akhirnya mati."
+      ]
+    },
+    {
+      "tag":"penyebab_penyakit_brown_spot",
+      "input":["Penyebab penyakit Brown Spot?","disebabkan oleh apa Penyakit Brown Spot?","apa penyebab penyakit Brown Spot?","Apa yang menjadi penyebab utama penyakit Brown Spot pada tanaman?","penyakit Brown Spot disebabkan oleh apa?"],
+      "responses":[
+        "Penyakit Brown Spot disebabkan oleh jamur Bipolaris oryzae"
+      ]
+    },
+    {
+      "tag":"penyebaran_penyakit_brown_spot",
+      "input":["Penyebaran penyakit brown spot?","Bagaimana mekanisme penularan brown spot dari tanaman yang terinfeksi ke tanaman sehat di sekitarnya?","bagaimana penyebaran penyakit Brown Spot?","Bagaimana cara penyebaran Brown Spot terjadi di antara tanaman dalam satu area pertanian?","penyakit Brown Spot disebarkan oleh?"],
+      "responses":[
+        "Penyakit Brown Spot menyebab melalui spora jamur yang terbawa oleh angin, air, alat pertanian, atau manusia."
+      ]
+    },
+    {
+      "tag":"pengendalian_penyakit_brown_spot",
+      "input":["Pengendalian penyakit brown spot?","bagaimana cara mengendalikan padi yang terkena penyakit Brown Spot?","Bagaimana praktik pengendalian hama dan penyakit di lahan pertanian yang dapat membantu mengurangi penyebaran penyakit brown spot?"],
+      "responses":[
+        "Pengendalian penyakit Brown Spot dilakukan dengan praktik pertanian yang baik, sanitasi yang baik, pengaturan populasi tanaman, dan rotasi tanaman."
+      ]
+    },
+    {
+      "tag":"gejala_penyakit_leaf_blast",
+      "input":["gejala penyakit leaf blast?","Bagaimana cara identifikasi gejala leaf blast pada tanaman secara visual?","Apa gejala penyakit Leaf Blast pada daun padi?","Berikan gejala daun padi yang terjangkit penyakit Leaf Blast?","seperti apa daun padi yang terkena penyakit Leaf Blast?","Apa ciri daun padi yang terkena penyakit Leaf Blast?"],
+      "responses":[
+        "Daun padi yang terkena penyakit Leaf Blast memiliki ciri bercak berbentuk elips pada daun, batang, malai bunga, dan gabah. Berwarna hijau keabu-abuan, kemudian berubah coklat atau merah kecoklatan. Pada malai bunga dan gabah, gejalanya berupa bercak hitam pada malai dan bulir padi yang telah terinfeksi."
+      ]
+    },
+    {
+      "tag":"penyebab_penyakit_leaf_blast",
+      "input":["penyebab penyakit Leaf Blast?","Disebabkan oleh apa Penyakit Leaf Blast?","Apa yang menjadi penyebab utama penyakit Leaf Blast pada tanaman?","apa penyebab penyakit Leaf Blast?","penyakit Leaf Blast disebabkan oleh apa?"],
+      "responses":[
+        "Penyakit Leaf Blast disebabkan oleh jamur Pyricularia oryzae"
+      ]
+    },
+    {
+      "tag":"penyebaran_penyakit_leaf_blast",
+      "input":["Penyebaran penyakit leaf blast?","Bagaimana mekanisme penularan leaf blast dari tanaman yang terinfeksi ke tanaman sehat di sekitarnya?","Bagaimana penyebaran penyakit Leaf Blast?","Penyakit Leaf Blast disebarkan oleh?","Bagaimana cara penyebaran Leaf Blast terjadi di antara tanaman dalam satu area pertanian?"],
+      "responses":[
+        "Penyakit Leaf Blast disebarkan melalui spora jamur melalui angin, air, dan kontak langsung antara tanaman yang terinfeksi dengan tanaman yang sehat."
+      ]
+    },
+    {
+      "tag":"pengendalian_penyakit_leaf_blast",
+      "input":["Pengendalian penyakit leaf blast?","bagaimana cara mengendalikan tanaman padi yang terkena penyakit Leaf Blast?","Bagaimana praktik pengendalian hama dan penyakit di lahan pertanian yang dapat membantu mengurangi penyebaran penyakit Leaf Blast"],
+      "responses":[
+        "Pengendalian penyakit Leaf Blast dilakukan dengan penggunaan varietas padi yang tahan terhadap penyakit, sanitasi kebun yang baik, dan pengelolaan air yang tepat."
+      ]
+    },
+    {
+      "tag":"gejala_penyakit_leaf_scald",
+      "input":["gejala penyakit leaf scald?","Bagaimana cara identifikasi gejala leaf scald pada tanaman secara visual","Apa gejala penyakit Leaf Scald pada daun padi?","Berikan gejala daun padi yang terjangkit penyakit Leaf Scald?","Seperti apa daun padi yang terkena penyakit Leaf Scald?","Apa ciri daun padi yang terkena penyakit Leaf Scald?"],
+      "responses":[
+        "Daun padi yang terjangkit penyakit Leaf Scald memiliki ciri muncul bercak yang awalnya berwarna kuning kecoklatan kemudian menjadi merah kecoklatan. Bercak-bercak ini membesar dan menyatu, membentuk lesi besar pada daun. Daun yang terinfeksi mengalami nekrosis (kematian jaringan)."
+      ]
+    },
+    {
+      "tag":"penyebab_penyakit_leaf_scald",
+      "input":["Penyebab penyakit leaf scald?","Apa yang menjadi penyebab utama penyakit leaf scald pada tanaman?","Apa penyebab penyakit Leaf Scald?","penyakit Leaf Scald disebabkan oleh apa?","disebabkan oleh apa Penyakit Leaf Scald?"],
+      "responses":[
+        "Penyakit Leaf Scald disebabkan oleh jamur Cochliobolus miyabeanus."
+      ]
+    },
+    {
+      "tag":"penyebaran_penyakit_leaf_scald",
+      "input":["Penyebaran penyakit leaf scald?","Bagaimana penyebaran penyakit Leaf Scald?","Bagaimana mekanisme penularan Leaf Scald dari tanaman yang terinfeksi ke tanaman sehat di sekitarnya?","Penyakit Leaf Scald disebarkan oleh?","Bagaimana cara penyebaran Leaf Scald terjadi di antara tanaman dalam satu area pertanian?"],
+      "responses":[
+        "Penyakit Leaf Scald disebarkan melalui spora jamur yang tersebar melalui angin, air, dan kontak langsung dengan tanaman yang terinfeksi."
+      ]
+    },
+    {
+      "tag":"pengendalian_penyakit_leaf_scald",
+      "input":["Pengendalian penyakit leaf scald?","bagaimana cara mengendalikan padi yang terkena penyakit Leaf Scald?","Bagaimana praktik pengendalian hama dan penyakit di lahan pertanian yang dapat membantu mengurangi penyebaran penyakit leaf scald?"],
+      "responses":[
+        "Pengendalian penyakit Leaf Scald dilakukan dengan menggunakan varietas tahan penyakit, sanitasi kebun yang baik, dan pengelolaan air yang tepat."
+      ]
+    },
+    {
+      "tag":"gejala_penyakit_narrow_brown_spot",
+      "input":["gejala penyakit narrow brown spot?", "Bagaimana cara identifikasi gejala narrow brown spot pada tanaman secara visual","Apa gejala penyakit Narrow Brown Spot pada daun padi?","Berikan gejala daun padi yang terjangkit penyakit Narrow Brown Spot?","Seperti apa daun padi yang terkena penyakit Narrow Brown Spot?","Apa ciri daun padi yang terkena penyakit Narrow Brown Spot?"],
+      "responses":[
+        "Daun padi yang terjangkit penyakit Narrow Brown Spot mempunyai ciri munculnya bercak panjang dan sempit berwarna coklat kehitaman dan memanjang sepanjang vena daun. Daun yang terinfeksi akan mengalami nekrosis, mengering dan mengalami pembusukan."
+      ]
+    },
+    {
+      "tag":"penyebab_penyakit_narrow_brown_spot",
+      "input":["Penyebab penyakit narrow brown spot?","Apa yang menjadi penyebab utama penyakit narrow brown spot pada tanaman?","Apa penyebab penyakit Narrow Brown Spot?","Penyakit Narrow Brown Spot disebabkan oleh apa?","Disebabkan oleh apa Penyakit Narrow Brown Spot?"],
+      "responses":[
+        "Penyebab penyakit Narrow Brown Spot disebabkan oleh jamur Bipolaris oryzae."
+      ]
+    },
+    {
+      "tag":"penyebaran_penyakit_narrow_brown_spot",
+      "input":["Penyebaran penyakit narrow brown spot?","Bagaimana mekanisme penularan narrow brown spot dari tanaman yang terinfeksi ke tanaman sehat di sekitarnya?","Bagaimana penyebaran penyakit Narrow Brown Spot?","Bagaimana cara penyebaran Narrow Brown Spot terjadi di antara tanaman dalam satu area pertanian?","Penyakit Narrow Brown Spot disebarkan oleh?"],
+      "responses":[
+        "Penyebaran penyakit Narrow Brown Spot dapat melalui spora jamur yang tersebar melalui angin, air, dan kontak langsung dengan tanaman yang terinfeksi."
+      ]
+    },
+    {
+      "tag":"pengendalian_penyakit_narrow_brown_spot",
+      "input":["Pengendalian penyakit narrow brown spot?","Bagaimana cara mengendalikan padi yang terkena penyakit Narrow Brown Spot?","Bagaimana praktik pengendalian hama dan penyakit di lahan pertanian yang dapat membantu mengurangi penyebaran penyakit narrow brown spot?"],
+      "responses":[
+        "Pengendalian penyakit Narrow Brown Spot dapat dilakukan dengan penggunaan varietas padi yang tahan penyakit, pengaturan populasi tanaman, sanitasi kebun yang baik, dan pengelolaan gulma."
+      ]
+    },
+    {
+      "tag":"jenis_jenis_penyakit_pada_daun_padi",
+      "input":["Apa saja jenis penyakit yang dapat menjangkit daun padi?","Penyakit apa saja yang menyerang daun padi?","Sebutkan penyakit yang ada pada daun padi?"],
+      "responses":[
+        "Sobat coddy berikut ini jenis-jenis penyakit yang biasa menyerang daun tanaman padi yaitu Bacterial Leaf Blight, Brown Spot, Leaf Blast, Leaf Scald, dan Narrow Brown Spot."
+      ]
+    }
+  ]
+}
