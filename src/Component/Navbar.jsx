@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const navbarStyle = {
     backgroundColor: 'white',
     fontFamily: 'Helvetica',
-    display: 'flex', 
+    display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
   };
@@ -18,11 +18,11 @@ const Navbar = () => {
     top: '60px', // Jarak dari atas
     right: '80px', // Jarak dari kanan
   };
-  
+
 
   const logoStyle = {
-    width: '100px', 
-    height: 'auto', 
+    width: '100px',
+    height: 'auto',
     display: 'block',
     margin: '0 auto',
   };
@@ -52,46 +52,46 @@ const Navbar = () => {
   };
 
   return (
-    <div>      
-    <img
-      src="logo.jpg"
-      alt="CODDY"
-      style={logoStyle}
-    />      
-    <nav style={navbarStyle}>
-      <ul style={{ listStyleType: 'none', margin: 0, padding: 20 }}>
-        <li style={listItemStyle}>
-          <Link to="/" style={linkStyle}>
+    <div>
+      <img
+        src="logo.jpg"
+        alt="CODDY"
+        style={logoStyle}
+      />
+      <nav style={navbarStyle}>
+        <ul style={{listStyleType: 'none', margin: 0, padding: 20}}>
+          <li style={listItemStyle}>
+            <Link to="/" style={linkStyle}>
             Beranda
-          </Link>
-        </li>
-        <li style={listItemStyle}>
-          <Link to="tentang" style={linkStyle}>
+            </Link>
+          </li>
+          <li style={listItemStyle}>
+            <Link to="tentang" style={linkStyle}>
             Tentang Kami
-          </Link>
-        </li>
-        <li style={listItemStyle}>
-          <Link to="kontak" style={linkStyle}>
+            </Link>
+          </li>
+          <li style={listItemStyle}>
+            <Link to="kontak" style={linkStyle}>
             Kontak
-          </Link>
-        </li>
-        <li style={produkListItemStyle}>
-          <Link to="product" style={linkStyle}>
+            </Link>
+          </li>
+          <li style={produkListItemStyle}>
+            <Link to="product" style={linkStyle}>
             Produk
-          </Link>
-        </li>
-        <li style={produkListItemStyle}>
-          <Link to="/Cart" style={linkStyle}>
-            <img
-              src="cart.jpg"
-              alt="Cart"
-              style={cartLogoStyle}
-            />
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  </div>
+            </Link>
+          </li>
+          <li style={produkListItemStyle}>
+            <Link to="/Cart" style={linkStyle}>
+              <img
+                src="cart.jpg"
+                alt="Cart"
+                style={cartLogoStyle}
+              />
+            </Link>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 };
 

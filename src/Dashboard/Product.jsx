@@ -1,23 +1,20 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { Link } from 'react-router-dom';
-import '../product.css';
+import {Link} from 'react-router-dom';
+import {Flex, SimpleGrid} from '@chakra-ui/react';
+import ProductSimple from './ProductSimple';
 
-const Product = ({ product }) => {
-  
-  if (!product) {
-    return null; 
-  }
-
+const Product = ({products}) => {
   return (
-    <Link to={`/product/${product.id}`} className="product-card-link" >
-      <div className="product-card">
-        <img src={product.gambar} alt={product.nama} className="product-image" />
-        <div className="product-info">
-          <h3 className="product-name">{product.nama}</h3>
-          <p className="product-price">Rp {product.harga}</p>
-        </div>
-      </div>
-    </Link>
+    <Flex justify="center" align="center" direction="column">
+      <SimpleGrid columns={{base: 1, md: 2, lg: 3}} spacing={8}>
+        {products.map((product) => (
+          <Link key={product.id} to={`/product/${product.id}`}>
+            <ProductSimple product={product} />
+          </Link>
+        ))}
+      </SimpleGrid>
+    </Flex>
   );
 };
 

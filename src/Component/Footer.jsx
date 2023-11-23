@@ -1,53 +1,74 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+import {
+  Box,
+  chakra,
+  Container,
+  Stack,
+  Text,
+  useColorModeValue,
+  VisuallyHidden,
+} from '@chakra-ui/react';
+import {FaInstagram, FaTwitter, FaYoutube} from 'react-icons/fa';
 
-const footerStyle = {
-  backgroundColor: '#6b4612',
-  color: '#fff',
-  textAlign: 'left',
-  padding: '10px 0',
-  position: 'relative',
-  bottom: 0,
-  width: '100%',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-};
-
-const contentStyle = {
-  marginBottom: '40px',
-};
-
-const copyrightStyle = {
-  marginLeft: '12px',
-  fontSize: '12px',
-};
-
-const socialIconStyle = {
-  width: '24px',
-  height: '24px',
-  
-  marginLeft: '10px',
-};
-
-const Footer = () => {
+const SocialButton = ({
+  children,
+  label,
+  href,
+}) => {
   return (
-    <div>
-      <div style={contentStyle}></div>
-      <footer style={footerStyle}>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
-          <img src="https://tse2.mm.bing.net/th?id=OIP.mWX3GQBBB46ySNdY3E56MQHaHa&pid=Api&P=0&h=220" alt="Facebook" style={socialIconStyle} />
-        </a>
-                
-        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-          <img src="https://s-media-cache-ak0.pinimg.com/736x/59/53/56/595356521a0229856e274ad00b8c4f3c.jpg" alt="Twitter" style={socialIconStyle} />
-        </a>
-
-        <p className="copyright" style={copyrightStyle}>
-          &#169; {new Date().getFullYear()} CODDY. Powered and secured by 2nd Group
-        </p>
-      </footer>
-    </div>
+    <chakra.button
+      bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+      rounded={'full'}
+      w={8}
+      h={8}
+      cursor={'pointer'}
+      as={'a'}
+      href={href}
+      display={'inline-flex'}
+      alignItems={'center'}
+      justifyContent={'center'}
+      transition={'background 0.3s ease'}
+      _hover={{
+        bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
+      }}
+    >
+      <VisuallyHidden>{label}</VisuallyHidden>
+      {children}
+    </chakra.button>
   );
 };
 
-export default Footer;
+const SmallWithSocial = () => {
+  return (
+    <Box
+      bg={useColorModeValue('#87711B', 'gray.900')}
+      color={useColorModeValue('black', 'gray.200')}
+    >
+      <Container
+        as={Stack}
+        maxW={'6xl'}
+        py={4}
+        direction={{base: 'column', md: 'row'}}
+        spacing={4}
+        justify={{base: 'center', md: 'space-between'}}
+        align={{base: 'center', md: 'center'}}
+      >
+        <Text>© 2023 Powered by CODDY. All Right Reserved</Text>
+        <Stack direction={'row'} spacing={6}>
+          <SocialButton label={'Twitter'} href={'#'}>
+            <FaTwitter />
+          </SocialButton>
+          <SocialButton label={'YouTube'} href={'#'}>
+            <FaYoutube />
+          </SocialButton>
+          <SocialButton label={'Instagram'} href={'#'}>
+            <FaInstagram />
+          </SocialButton>
+        </Stack>
+      </Container>
+    </Box>
+  );
+};
+
+export default SmallWithSocial;

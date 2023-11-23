@@ -1,10 +1,11 @@
-import React, { useCallback, useState, useEffect } from "react";
-import Bottom from "./Bottom";
+/* eslint-disable react/jsx-no-undef */
+import React, {useCallback, useState, useEffect} from 'react';
+import Mid from './Mid';
 
 const Home = () => {
   const containerStyle = {
     textAlign: 'center',
-    padding: '3px',
+    padding: '30px',
     width: '100%',
   };
 
@@ -25,9 +26,9 @@ const Home = () => {
   };
 
   const images = [
-    "skide 1.jpeg",
-    "slide2.jpeg",
-    "slide3.jpeg",    
+    'skide 1.jpeg',
+    'slide2.jpeg',
+    'slide3.jpeg',
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -47,7 +48,7 @@ const Home = () => {
   }, [nextSlide]);
 
   return (
-    <div style={containerStyle}>
+    <><div style={containerStyle}>
       <div style={sliderContainerStyle}>
         {images.map((image, index) => (
           <div
@@ -61,9 +62,7 @@ const Home = () => {
           </div>
         ))}
       </div>
-      
-      <Bottom />
-    </div>
+    </div><Mid /></>
   );
 };
 

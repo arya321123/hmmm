@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -5,12 +6,12 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3001;
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.post('/send-email', async (req, res) => {
   try {
-    const { name, email, phone, description } = req.body;
+    const {name, email, phone, description} = req.body;
 
     // Konfigurasi transporter untuk nodemailer
     const transporter = nodemailer.createTransport({

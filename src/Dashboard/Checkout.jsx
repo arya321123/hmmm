@@ -1,13 +1,15 @@
+/* eslint-disable max-len */
+/* eslint-disable react/prop-types */
 import React from 'react';
-import '../product.css'; // Import the Checkout.css file
 
-const Checkout = ({ selectedProduct }) => {
+// eslint-disable-next-line react/prop-types
+const Checkout = ({selectedProduct}) => {
   if (!selectedProduct) {
     return <p>Belum ada produk yang dipilih.</p>;
   }
 
-  const { product, quantity } = selectedProduct;
-  const { nama, harga, gambar } = product;
+  const {product, quantity} = selectedProduct;
+  const {nama, harga, gambar} = product;
 
   const totalHarga = harga * quantity;
 

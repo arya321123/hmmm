@@ -1,245 +1,202 @@
-import React from "react";
-import { Link } from "react-router-dom";
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable max-len */
+'use client';
 
-const Bottom = () => {
-  const containerStyle = {
-    fontFamily: "Helvetica",
-    textAlign: "left",
-    padding: "80px",
-  };
+import React from 'react';
+import {
+  Box,
+  Heading,
+  Image,
+  Text,
+  Divider,
+  HStack,
+  Tag,
+  Wrap,
+  WrapItem,
+  useColorModeValue,
+  Container,
+  VStack,
+} from '@chakra-ui/react';
 
-  const paragraphStyle = {
-    fontSize: "16px",
-    marginBottom: "20px",
-  };
+const BlogTags = ({tags, marginTop = 0}) => (
+  <HStack spacing={2} marginTop={marginTop}>
+    {tags.map((tag) => (
+      <Tag size={'md'} variant="solid" colorScheme="orange" key={tag}>
+        {tag}
+      </Tag>
+    ))}
+  </HStack>
+);
 
-  const imageContainerStyle = {
-    display: "flex",
-    justifyContent: "space-around",
-    marginBottom: "20px",
-  };
-
-  const imageStyle = {
-    width: "60px",
-    height: "50px",
-    marginBottom: "10px",
-  };
-
-  const verticalineStyle = {
-    width: "100%",
-    paddingTop: "30px",
-    borderBottom: "2px solid  #ccccb3",
-    marginBottom: "20px",
-  };
-
-  const bacaJugaStyle = {
-    fontSize: "16px",
-    fontWeight: "light",
-  };
-
-  const titleStyle = {
-    fontSize: "21px",
-    fontWeight: "light",
-  };
-
-  const articleStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    marginTop: "20px",
-  };
-
-  const articleImageStyle = {
-    width: "100px",
-    height: "100px",
-    marginRight: "20px",
-  };
-
-  const articleContentStyle = {
-    flex: 1,    
-  };
-
-  const readMoreButtonStyle = {
-    background: "#ffcc00",
-    color: "white",
-    padding: "8px 16px",
-    textDecoration: "none",
-    border: "none",    
-  };
-
-  return (
-    <div style={containerStyle}>
-    <p style={titleStyle}>Produk dan Layanan Kami</p>
-      <p style={paragraphStyle}>
-        Kami akan membantu menginformasikan kepada Anda mengenai kesehatan padi
-        Anda dan merekomendasikan produk yang sesuai dengan gejala atau
-        penyakit yang ditanam padi Anda.
-      </p>
-      <div style={imageContainerStyle}>
-        <Link to="/komponen1">
-          <figure>
-            <img src="pkt.jpg" alt="" style={imageStyle} />
-            <figcaption>Penilaian<br /> Kesehatan <br />Tanaman</figcaption>
-          </figure>
-        </Link>
-        <Link to="/Product">
-          <figure>
-            <img src="elenmeyer.jpg" alt="" style={imageStyle} />
-            <figcaption>Pupuk dan <br />Perbaikan <br />Tanaman</figcaption>
-          </figure>
-        </Link>
-        <Link to="/komponen3">
-          <figure>
-            <img src="ph.jpg" alt="" style={imageStyle} />
-            <figcaption>pengendalian<br /> Hama</figcaption>
-          </figure>
-        </Link>
-      </div>
-      
-      <div style={verticalineStyle}></div>
-      <div style={bacaJugaStyle}>Baca Juga: Cara Mencegah Penyakit</div>
-      <div style={articleStyle}>
-        <img
-          src="https://saprotan-utama.com/wp-content/uploads/2022/11/Penggerek-batang-padi.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Mengatasi Penggerek Batang Padi Terkini!</p>
-          <p>Mengatasi penggerek batang padi perlu dilakukan dengan cara terkini agar hasil panen padi tetap terjaga. Penggerek batang padi adalah salah satu hama yang paling sering menyerang tanaman padi dengan....</p>
-          <Link to="https://saprotan-utama.com/mengatasi-penggerek-batang-padi-terkini/" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button> {/*1*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://saprotan-utama.com/wp-content/uploads/2021/12/Teknik-Budidaya-Padi-1.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Inilah 6 Teknik Budidaya Padi yang Sahabat perlu tahu!</p>
-          <p>Pengelolaan tanaman terpadu merupakan salah satu pendekatan untuk mengelola lahan, air, tanaman dan iklim secara terpadu dan berkelanjutan. Hal ini dilakukan untuk meningkatkan produktivitas....</p>
-          <Link to="https://saprotan-utama.com/inilah-6-teknik-budidaya-padi-yang-sahabat-perlu-tahu/" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*2*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://saprotan-utama.com/wp-content/uploads/2021/03/Anakan_Padi.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Cara Budidaya Padi untuk Memperbanyak Anakan Produktif</p>
-          <p>Dalam usaha budidaya padi, tentunya harapan setiap petani adalah mendapatkan hasil yang maksimal. Sudah banyak panduan yang disosialisasikan kepada para petani, mulai dari metode tanam jajar legowo....</p>
-          <Link to="https://saprotan-utama.com/cara-budidaya-padi-untuk-memperbanyak-anakan-produktif/" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*3*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://saprotan-utama.com/wp-content/uploads/2021/01/pupuk_urea_padi.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Dicari di Mana-mana, Apa Manfaat Pupuk Urea untuk Padi?</p>
-          <p>Hai Sahabat, jika sebelumnya kita sudah pernah membahas pemupukan untuk tanaman cabai dan bawang merah, hari ini kita akan belajar tentang pemupukan untuk tanaman padi ya, secara khusus mengenai Pupuk Urea.....</p>
-          <Link to="https://saprotan-utama.com/dicari-di-mana-mana-apa-manfaat-pupuk-urea-untuk-padi/" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*4*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://www.ptnpg.com/~img/artikel_npg4-3eb47-3553_250-t598_25.webp"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>APLIKASI PUPUK NPK FERTICOMP 15-15-15 PADA TANAMAN PADI SAWAH</p>
-          <p>Ketersediaan unsur hara bagi tanaman merupakan salah satu faktor yang mempengaruhi produktivitas padi di Indonesia. Untuk meningkatkan ketersediaan hara di dalam tanah sekaligus meningkatkan produksi padi, PT Nusa Palapa Gemilang mengembangkan pupuk majemuk NPK 15-15-15 dengan Merk FERTICOMP. FERTICOMP 15-15-15 memiliki kandungan 15% N, 15%....</p>
-          <Link to="https://www.ptnpg.com/Berita/aplikasi-pupuk-npk-ferticomp-15-15-15-pada-tanaman-padi-sawah.html" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*5*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://www.bertani.co.id/wp-content/uploads/2019/10/PPP.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>8 Cara Menanam Padi Yang Baik dan Benar Sampai Panen!</p>
-          <p>Padi merupakan makanan pokok bagi masyarakat asia terlebih lagi indonesia. Padi merupakan asal daripada beras yang menghasilkan nasi yang biasanya kita makan dalam keseharian....</p>
-          <Link to="https://www.bertani.co.id/cara-menanam-padi/ " target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*6*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://bibitonline.com/wp-content/uploads/padi-2.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Langkah-langkah Cara Menanam Padi</p>
-          <p>Tanaman padi merupakan asal muasal dari beras. Beras merupakan kebutuhan utama masyarakat Indonesia untuk mencukupi kebutuhan karbohidrat. Begitu bergantungnya masyarakat akan kebutuhan beras atau nasi....</p>
-          <Link to="https://bibitonline.com/artikel/langkah-langkah-cara-menanam-padi  " target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*6*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://asset.kompas.com/crops/KJhgrrQrrDF041h8oZhjINty0yM=/0x0:1000x667/750x500/data/photo/2022/09/19/6327e2b3a4373.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Ciri-ciri Tanaman Padi Siap Panen</p>
-          <p>Selain upaya meningkatkan produktivitas tanaman, masa panen padi juga diupayakan agar bisa lebih singkat. Lantas, berapakah umur padi yang siap panen? Dan bagaimana kriterianya? Simak penjelasan lengkapnya berikut ini....</p>
-          <Link to="https://agri.kompas.com/read/2022/09/19/142900484/ciri-ciri-tanaman-padi-siap-panen " target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*7*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://4.bp.blogspot.com/-VNU7K0jG-5E/VNB6u4xrRcI/AAAAAAAAAFE/DT4Xh9ul-5g/s1600/images%2B(4).jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>PENGENALAN TANAMAN PADI</p>
-          <p>Padi merupakan tanaman dagangan di Malaysia dan tujuan ditanam adalah untuk mendapatkan beras sebagai makanan ruji.Beras adalah bijian yang diperoleh daripada tanaman padi yang telah dikupas kulitnya.....</p>
-          <Link to="https://kamipetanimuda.blogspot.com/2015/01/pengenalan-tanaman-padi.html" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*8*/}
-          </Link>
-        </div>
-      </div>
-      <div style={articleStyle}>
-        <img
-          src="https://pertanian.kulonprogokab.go.id/files/news/normal/bdc0850478e311f10650b4cf3dd6cff3.jpg"
-          alt="Article"
-          style={articleImageStyle}
-        />
-        <div style={articleContentStyle}>
-          <p style={titleStyle}>Hama Utama Padi</p>
-          <p>Pertanaman padi varietas unggul yang sehat akan memberikan hasil dan pendapatan optimal bagi petani. Untuk itu, tanaman padi harus terus dirawat secara intensif dan dijaga dari gangguan organisme pengganggu tanaman (OPT).....</p>
-          <Link to="https://pertanian.kulonprogokab.go.id/detil/1206/hama-utama-padi" target="_blank">
-            <button style={readMoreButtonStyle}>Pelajari...</button>{/*9*/}
-          </Link>
-        </div>
-      </div>      
-    </div>
-  );
+const BlogAuthor = ({date, name}) => (
+  <HStack marginTop="2" spacing="2" display="flex" alignItems="center">
+    <Image
+      borderRadius="full"
+      boxSize="40px"
+      src="https://th.bing.com/th/id/OIP.scwCs0kV3vZbFkuxUr5lgQHaJ4?w=134&h=180&c=7&r=0&o=5&pid=1.7"
+      alt={`Avatar of ${name}`}
+    />
+    <Text fontWeight="light">{name}</Text>
+    <Text>—</Text>
+    <Text>{date.toLocaleDateString()}</Text>
+  </HStack>
+);
+const readMoreButtonStyle = {
+  background: '#ffcc00',
+  color: 'white',
+  padding: '3px ',
+  textDecoration: 'none',
+  border: 'none',
 };
+const ArticleList = () => (
+  <Container maxW={'7xl'} p="12">
+    <Heading as="p">Baca Juga : Article</Heading>
+    <Box
+      marginTop={{base: '1', sm: '5'}}
+      display="flex"
+      flexDirection={{base: 'column', sm: 'row'}}
+      justifyContent="space-between">
+      <Box
+        display="flex"
+        flex="1"
+        marginRight="3"
+        position="relative"
+        alignItems="center">
+        <Box
+          width={{base: '100%', sm: '85%'}}
+          zIndex="2"
+          marginLeft={{base: '0', sm: '5%'}}
+          marginTop="5%">
+          <Box textDecoration="none" _hover={{textDecoration: 'none'}}>
+            <Image
+              borderRadius="lg"
+              src={
+                'https://saprotan-utama.com/wp-content/uploads/2022/11/Penggerek-batang-padi.jpg'
+              }
+              alt="some good alt text"
+              objectFit="contain"
+            />
+          </Box>
+        </Box>
+        <Box zIndex="1" width="100%" position="absolute" height="100%">
+          <Box
+            bgGradient={useColorModeValue(
+                'radial(orange.600 1px, transparent 1px)',
+                'radial(orange.300 1px, transparent 1px)',
+            )}
+            backgroundSize="20px 20px"
+            opacity="0.4"
+            height="100%"
+          />
+        </Box>
+      </Box>
+      <Box
+        display="flex"
+        flex="1"
+        flexDirection="column"
+        justifyContent="center"
+        marginTop={{base: '3', sm: '0'}}>
+        <BlogTags tags={['Botanical', 'Product']} />
+        <Heading marginTop="1">
+          <Text textDecoration="none" _hover={{textDecoration: 'none'}}>
+          Mengatasi Penggerek Batang Padi Terkini!
+          </Text>
+        </Heading>
+        <Text
+          as="p"
+          marginTop="2"
+          color={useColorModeValue('gray.700', 'gray.200')}
+          fontSize="lg">
+          Mengatasi penggerek batang padi perlu dilakukan dengan cara terkini agar hasil panen padi tetap terjaga.
+           Penggerek batang padi adalah salah satu hama yang paling sering menyerang tanaman padi dengan intensitas serangan sampai 90%.
+           Hama ini menyerang pada berbagai fase mulai dari fase vegetatif sampai generatif.
+           Gejala yang ditimbulkan dari serangan hama penggerek batang secara umum ada 2 jenis, yaitu sundep dan beluk.
+          <a
+            href="https://saprotan-utama.com/mengatasi-penggerek-batang-padi-terkini/"
+            target="_blank"
+            style={readMoreButtonStyle} rel="noreferrer"
+          >
+        Pelajari...
+          </a>
+        </Text>
 
-export default Bottom;
+        <BlogAuthor name="Admin" date={new Date('2022-11-28T09:28:53+00:00')} />
+      </Box>
+    </Box>
+    <Heading as="h2" marginTop="5">
+      Article Lainnya
+    </Heading>
+    <Divider marginTop="5" />
+    <Wrap spacing="30px" marginTop="5">
+      <WrapItem width={{base: '100%', sm: '45%', md: '45%', lg: '30%'}}>
+        <Box w="100%">
+          <Box borderRadius="lg" overflow="hidden">
+            <Box textDecoration="none" _hover={{textDecoration: 'none'}}>
+              <Image
+                transform="scale(1.0)"
+                src={
+                  'https://saprotan-utama.com/wp-content/uploads/2021/12/Teknik-Budidaya-Padi-1.jpg'
+                }
+                alt="some text"
+                objectFit="contain"
+                width="100%"
+                transition="0.3s ease-in-out"
+                _hover={{
+                  transform: 'scale(1.05)',
+                }}
+              />
+            </Box>
+          </Box>
+          <BlogTags tags={['Botanical', 'Product']} marginTop={3} />
+          <Heading fontSize="xl" marginTop="2">
+            <Text textDecoration="none" _hover={{textDecoration: 'none'}}>
+            Inilah 6 Teknik Budidaya Padi yang Sahabat perlu tahu!
+            </Text>
+          </Heading>
+          <Text as="p" fontSize="md" marginTop="2">
+          Pengelolaan tanaman terpadu merupakan salah satu pendekatan untuk mengelola lahan, air,
+          tanaman dan iklim secara terpadu dan berkelanjutan.
+          Hal ini dilakukan untuk meningkatkan produktivitas, kelestarian lingkungan dan pendapatan petani.
+          Komponen Pengelolaan Tanaman Terpadu (PTT) berupa:
+          </Text>
+          <a
+            href="https://saprotan-utama.com/inilah-6-teknik-budidaya-padi-yang-sahabat-perlu-tahu/"
+            target="_blank"
+            style={readMoreButtonStyle} rel="noreferrer"
+          >
+        Pelajari...
+          </a>
+          <BlogAuthor name="admin" date={new Date('2021-12-16T02:46:17+00:00')} />
+        </Box>
+      </WrapItem>
+    </Wrap>
+    <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
+      <Heading as="h2">What we write about</Heading>
+      <Text as="p" fontSize="lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum quam
+        arcu, eu tempus tortor molestie at. Vestibulum pretium condimentum dignissim.
+        Vestibulum ultrices vitae nisi sed imperdiet. Mauris quis erat consequat,
+        commodo massa quis, feugiat sapien. Suspendisse placerat vulputate posuere.
+        Curabitur neque tortor, mattis nec lacus non, placerat congue elit.
+      </Text>
+      <Text as="p" fontSize="lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum quam
+        arcu, eu tempus tortor molestie at. Vestibulum pretium condimentum dignissim.
+        Vestibulum ultrices vitae nisi sed imperdiet. Mauris quis erat consequat,
+        commodo massa quis, feugiat sapien. Suspendisse placerat vulputate posuere.
+        Curabitur neque tortor, mattis nec lacus non, placerat congue elit.
+      </Text>
+      <Text as="p" fontSize="lg">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum quam
+        arcu, eu tempus tortor molestie at. Vestibulum pretium condimentum dignissim.
+        Vestibulum ultrices vitae nisi sed imperdiet. Mauris quis erat consequat,
+        commodo massa quis, feugiat sapien. Suspendisse placerat vulputate posuere.
+        Curabitur neque tortor, mattis nec lacus non, placerat congue elit.
+      </Text>
+    </VStack>
+  </Container>
+);
+
+export default ArticleList;
