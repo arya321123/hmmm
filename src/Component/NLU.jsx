@@ -6,10 +6,10 @@ import React from 'react';
 const NLU = ({ matchedInputs}) => {
   const nluContainerStyle = {
     marginTop: '20px',
-    backgroundColor: '#CCE5FF', // Warna latar belakang container NLU
+    backgroundColor: '#CCE5FF',
     padding: '10px',
     borderRadius: '8px',
-    maxWidth: '70%', // Lebar maksimum container NLU
+    maxWidth: '70%',
   };
 
   const matchedInputsStyle = {

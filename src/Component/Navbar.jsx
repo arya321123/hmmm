@@ -15,8 +15,8 @@ const Navbar = () => {
     height: 'auto',
     cursor: 'pointer',
     position: 'absolute',
-    top: '60px', // Jarak dari atas
-    right: '80px', // Jarak dari kanan
+    top: '60px',
+    right: '80px',
   };
 
 

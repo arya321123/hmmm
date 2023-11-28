@@ -48,7 +48,6 @@ const FloatingChatbot = () => {
 
     const newChatHistory = [...chatHistory, {type: 'user', message}];
 
-    // Replace this fetch logic with your own data fetching
     fetch('/dataset_chatbot.json')
         .then((response) => response.json())
         .then((data) => {

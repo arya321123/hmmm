@@ -3,7 +3,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
 import {Route, Routes} from 'react-router-dom';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Navbar from './Component/Navbar';
 import Home from './Dashboard/Home';
 import Kontak from './Dashboard/Kontak';
@@ -13,8 +13,6 @@ import Footer from './Component/Footer';
 import ProductDetail from './Dashboard/ProductDetail';
 import FloatingChatBot from './Dashboard/FloatingChatBot';
 import Checkout from './Dashboard/Checkout';
-import ImageUploader from './Component/ImageUploader';
-import ObjectDetection from './Component/ObjectDetection';
 // eslint-disable-next-line require-jsdoc
 
 const products = [
@@ -148,20 +146,24 @@ function App() {
     setSelectedProduct({product, quantity});
   };
 
-  const [detectionResults, setDetectionResults] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(process.env.PUBLIC_URL + '/Object Detection/deteksipenyakit.json');
 
-  const handleImageUpload = async (imageFile) => {
-    // Implementasi deteksi objek di sini
-    // Gunakan data label dan model yang sesuai
-    // Contoh hasil deteksi (format dapat disesuaikan dengan output model):
-    const predictions = [
-      {label: 'Object1', confidence: 0.95},
-      {label: 'Object2', confidence: 0.85},
-      // ... dan seterusnya
-    ];
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
 
-    setDetectionResults(predictions);
-  };
+        const data = await response.json();
+        setJsonData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <>
@@ -170,8 +172,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/kontak" element={<Kontak />} />
         <Route path="/product" element={<Product products={products} />} />
-        <Route path="/image-upload" element={<ImageUploader onImageUpload={handleImageUpload} />} />
-        {detectionResults.length > 0 && <Route path="/object-detection" element={<ObjectDetection predictions={detectionResults} />} />}
         <Route path="/product/:id" element={<ProductDetail products={products} />} />
         <Route path="/checkout" element={<Checkout selectedProduct={selectedProduct} />} />
         <Route path="/tentang" element={<Tentang />} />

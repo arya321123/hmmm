@@ -4,11 +4,11 @@ import React from 'react';
 const MG = ({botResponse}) => {
   const botMessageStyle = {
     marginTop: '20px',
-    backgroundColor: '#DCF8C6', // Warna latar belakang respons bot
+    backgroundColor: '#DCF8C6',
     padding: '10px',
     borderRadius: '8px',
-    maxWidth: '70%', // Lebar maksimum respons bot
-    alignSelf: 'flex-end', // Respons bot ditempatkan di sebelah kanan
+    maxWidth: '70%',
+    alignSelf: 'flex-end',
   };
 
   return (

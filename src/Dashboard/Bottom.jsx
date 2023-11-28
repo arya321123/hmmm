@@ -173,7 +173,7 @@ const ArticleList = () => (
       </WrapItem>
     </Wrap>
     <VStack paddingTop="40px" spacing="2" alignItems="flex-start">
-      <Heading as="h2">What we write about</Heading>
+      <Heading as="h2">Belum selesai</Heading>
       <Text as="p" fontSize="lg">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec condimentum quam
         arcu, eu tempus tortor molestie at. Vestibulum pretium condimentum dignissim.

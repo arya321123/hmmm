@@ -20,7 +20,7 @@
   
   .product-image {
     width: 100%;
-    height: 200px; /* Sesuaikan tinggi gambar sesuai kebutuhan Anda */
+    height: 200px;
     object-fit: cover;
   }
   
@@ -37,6 +37,6 @@
   .product-price {
     margin: 8px 0;
     font-size: 16px;
-    color: #e44d26; /* Warna merah untuk harga */
+    color: #e44d26;
   }
   

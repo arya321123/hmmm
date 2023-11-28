@@ -45,7 +45,7 @@ export default function SimpleThreeColumns() {
           <Mid
             src={pktImg} alt='q'
             title={'Penilaian Kesehatan'}
-            link="/Product"
+            link="/ImageDetection"
           />
           <Mid
             src={eleImg} alt='q'
