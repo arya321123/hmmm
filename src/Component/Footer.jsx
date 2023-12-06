@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
@@ -9,7 +10,7 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from '@chakra-ui/react';
-import {FaInstagram, FaTwitter, FaYoutube} from 'react-icons/fa';
+import {FaInstagram, FaTwitter} from 'react-icons/fa';
 
 const SocialButton = ({
   children,
@@ -39,6 +40,7 @@ const SocialButton = ({
   );
 };
 
+
 const SmallWithSocial = () => {
   return (
     <Box
@@ -55,14 +57,11 @@ const SmallWithSocial = () => {
         align={{base: 'center', md: 'center'}}
       >
         <Text>© 2023 Powered by CODDY. All Right Reserved</Text>
-        <Stack direction={'row'} spacing={6}>
-          <SocialButton label={'Twitter'} href={'#'}>
+        <Stack direction={'row'} spacing={6} style={{position: 'relative', left: '-55px'}}>
+          <SocialButton label={'Twitter'} href={'https://twitter.com/Aryawib15919756'}>
             <FaTwitter />
           </SocialButton>
-          <SocialButton label={'YouTube'} href={'#'}>
-            <FaYoutube />
-          </SocialButton>
-          <SocialButton label={'Instagram'} href={'#'}>
+          <SocialButton label={'Instagram'} href={'https://www.instagram.com/aryaw0844/'}>
             <FaInstagram />
           </SocialButton>
         </Stack>

@@ -1,31 +1,31 @@
 /* eslint-disable max-len */
-const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
+import express from 'express';
+import {createTransport} from 'nodemailer';
+import {urlencoded, json} from 'body-parser';
 
 const app = express();
 const port = 3001;
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json());
+app.use(urlencoded({extended: true}));
+app.use(json());
 
 app.post('/send-email', async (req, res) => {
   try {
     const {name, email, phone, description} = req.body;
 
     // Konfigurasi transporter untuk nodemailer
-    const transporter = nodemailer.createTransport({
+    const transporter = createTransport({
       service: 'gmail',
       auth: {
-        user: 'your-email@gmail.com',
-        pass: 'your-email-password',
+        user: 'email@gmail.com',
+        pass: 'email-password',
       },
     });
 
     // Konfigurasi pesan email
     const mailOptions = {
-      from: 'your-email@gmail.com',
-      to: 'your-destination-email@example.com',
+      from: 'email@gmail.com',
+      to: 'destination-email@example.com',
       subject: 'Form Submission',
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDescription: ${description}`,
     };

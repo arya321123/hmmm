@@ -1,0 +1,51 @@
+.thank-you-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease-in-out forwards, glow 1.5s infinite alternate;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .thank-you-container:hover {
+    background-color: #e0e0e0;
+  }
+  
+  h1 {
+    color: #4caf50;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .thank-you-container:hover h1 {
+    color: #45a049;
+  }
+  
+  p {
+    color: #333;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .thank-you-container:hover p {
+    color: #555;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes glow {
+    to {
+      box-shadow: 0 0 10px rgba(76, 175, 80, 0.8);
+    }
+  }
+  

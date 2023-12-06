@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "kategori": "Benih Padi",
+        "name": "Benih Prima",
+        "deskripsi": "Benih padi prima dengan beragam varietas populer seperti IR-64, Membramo, Ciherang, Mekongga, Pepe, Situ Bangendit, Way Apo Buru, dll. Benih Prima memiliki warna cerah, daya tumbuh ≥ 90 %, campuran varietas lain ≤ 0.2 %.\nJarak Tanam: Tanam bibit 1 – 2 per lubang",
+        "price": 85000,
+        "image": "benihprima.png"
+    },
+    {
+        "id": 2,
+        "kategori": "Benih Padi",
+        "name": "Benih Unggul",
+        "deskripsi": "Benih padi unggul dengan beragam varietas populer seperti IR-64, Membramo, Ciherang, Mekongga, Pepe, Situ Bangendit, Way Apo Buru, dll. Benih Unggul memiliki warna cerah, daya tumbuh ≥ 80 %, campuran varietas lain ≤ 0.5 %.\nJarak Tanam: Tanam bibit 1 – 2 per lubang",
+        "price": 95000,
+        "image": "benih_unggul.png"
+    },
+    {
+        "id": 3,
+        "kategori": "Pupuk",
+        "name": "Pupuk NPK 16.16.16 Merah",
+        "deskripsi": "NPK PAK TANI 16-16-16 MERAH merupakan pupuk majemuk yang diproduksi dengan teknologi modern dengan komposisi unsur hara seimbang. Pupuk compound granular yang mengandung unsur N-P-K yang seimbang, seperti Copper, Zinc, Mangan, dan Boron yang sesuai dengan kebutuhan tanaman. Berbentuk granular mudah larut dalam air. Pupuk ini bisa digunakan untuk pupuk dasar maupun pupuk susulan untuk padi.\nRekomendasi Dosis: 500 (kg/ha)",
+        "price": 19500,
+        "image": "NPK.png"
+    },
+    {
+        "id": 4,
+        "kategori": "Pupuk",
+        "name": "Pupuk NPK 16.16.16 Biru",
+        "deskripsi": "NPK PAK TANI 16-16-16 BIRU merupakan pupuk majemuk yang diproduksi dengan teknologi modern dengan komposisi unsur hara seimbang. Pupuk compound granular yang mengandung unsur N-P-K yang seimbang, seperti Copper, Zinc, Mangan, dan Boron yang sesuai dengan kebutuhan tanaman. Berbentuk granular mudah larut dalam air. Pupuk ini bisa digunakan untuk pupuk dasar maupun pupuk susulan untuk padi.\nRekomendasi Dosis: 500 (kg/ha)",
+        "price": 19500,
+        "image": "NPKbiru.png"
+    },
+    {
+        "id": 5,
+        "kategori": "Pupuk",
+        "name": "NPK Cair Indofertil",
+        "deskripsi": "Pupuk NPK cair yang diaplikasikan dengan cara penyemprotan pada daun, batang dan cabang tanaman. Sangat berguna untuk memacu pertumbuhan daun, pembentukan bunga dan buah. Pupuk ini sangat ideal dipakai pada tanaman padi.\nRekomendasi Dosis: 5-10 sendok makan per tangki semprot 15 lt",
+        "price": 34500,
+        "image": "NPKcair.png"
+    },
+    {
+        "id": 6,
+        "kategori": "Pupuk",
+        "name": "Pupuk Fertila Padi",
+        "deskripsi": "Pupuk spray 100% Soluble, lengkap unsur hara makro dan unsur hara mikro yang diformulasikan khususnya untuk tanaman padi pada masa vegetatif.\nRekomendasi Dosis: 4 kg/ha",
+        "price": 25000,
+        "image": "fertilapadi.png"
+    },
+    {
+        "id": 7,
+        "kategori": "Pupuk",
+        "name": "Pupuk ULTRADAP",
+        "deskripsi": "ULTRADAP merupakan pupuk Mono Ammonium Phosphate berbentuk kristal yang mudah larut dalam air. Cocok dipakai untuk tanaman padi.\nRekomendasi Dosis: 2 – 4 gr/lt air",
+        "price": 50300,
+        "image": "ultradap.png"
+    },
+    {
+        "id": 8,
+        "kategori": "Pupuk",
+        "name": "Pupuk PN Kristal",
+        "deskripsi": "PN13-0-45/KNO3 Prill adalah pupuk Kalium (Potassium) Nitrat yang diformulasikan dari bahan alam tambang sumber Nitrat dan Potassium di Chile. Mengandung Nitrogen dalam bentuk Nitrat dan Potassium yang mudah larut.\nRekomendasi Dosis: 25 – 30 kg/ha KNO Putih",
+        "price": 39800,
+        "image": "pnkristal.png"
+    },
+    {
+        "id": 9,
+        "kategori": "Pupuk",
+        "name": "Pupuk Magnesium Sulfate",
+        "deskripsi": "Merupakan pupuk makro sekunder yang mengandung Magnesium dan Sulfur, berbentuk kristal sehingga mudah larut. Pupuk Magnesium Kristal Pak Tani dapat diaplikasikan dengan cara disemprot/disiramkan dan ditabur.\nRekomendasi Dosis: 35 – 50 kg/ha",
+        "price": 14000,
+        "image": "magnesium.png"
+    },
+    {
+        "id": 10,
+        "kategori": "Fungisida",
+        "name": "Fungisida TAFT 75 WP",
+        "deskripsi": "Taft 75 WP adalah Fungisida protektif, kuratif, dan sistemik, berbentuk tepung yang dapat disuspensikan berwarna kuning ke biru-biruan. Berfungsi untuk mengendalikan penyakit bercak daun (Cercospora janseana) pada padi.\nRekomendasi Dosis: 2 gr/l air",
+        "price": 70800,
+        "image": "taft.png"
+    },
+    {
+        "id": 11,
+        "kategori": "Pupuk",
+        "name": "CPN 15-0-14 KNO3 Merah",
+        "deskripsi": "CPN 15-0-14 KNO3 Merah adalah pupuk Kalium (Potassium) Nitrat yang diformulasikan dari bahan alam tambang sumber Nitrat dan Potassium di Chile. Mengandung Nitrogen dalam bentuk Nitrat dan Kalium yang mudah larut. CPN 15-0-14/KNO3 Merah cocok untuk fase vegetatif (pertumbuhan awal tanaman sampai menjelang pembungaan).\nRekomendasi Dosis: 25 – 30 kg/ha KNO3 Merah",
+        "price": 67300,
+        "image": "cpn15.png"
+    },
+    {
+        "id": 12,
+        "kategori": "Herbisida",
+        "name": "ULTRON 25 18 WP",
+        "deskripsi": "ULTRON 25 18 WP adalah herbisida sistemik selektif pra tumbuh dan purna tumbuh berbentuk tepung yang dapat disuspensikan untuk mengendalikan gulma umum pada tanaman padi.\nRekomendasi Dosis: 60 – 80 g/ha",
+        "price": 8500,
+        "image": "herbisida.png"
+    },
+    {
+        "id": 13,
+        "kategori": "Zat Pengatur Tumbuh",
+        "name": "Poston 250SC",
+        "deskripsi": "POSTON 250 SC adalah zat pengatur tumbuh tanaman berbentuk pekatan suspensi, berwarna putih, untuk meningkatkan produksi gabah dan mutu hasil panen pada tanaman padi.\nRekomendasi Dosis: Semprot pada saat menjelang keluarnya malai 250 ml/ha",
+        "price": 58800,
+        "image": "poston.png"
+    },
+    {
+        "id": 14,
+        "kategori": "Fungisida",
+        "name": "Torbinol 480 SC",
+        "deskripsi": "Torbinol 480 SC adalah fungisida sistemik yang bersifat protektif berbentuk pekatan suspensi, untuk mengendalikan penyakit blas (Pyricularia oryzae) pada tanaman padi.\nRekomendasi Dosis: 200 – 300 ml/hektar",
+        "price": 146000,
+        "image": "torbinol.png"
+    },
+    {
+        "id": 15,
+        "kategori": "Insektisida",
+        "name": "Avimax 20 100 EC",
+        "deskripsi": "Avimax 20 100 EC adalah insektisida racun kontak dan lambung berbentuk pekatan yang dapat diemulsikan berwarna kuning terang untuk mengendalikan hama pada tanaman padi.\nRekomendasi Dosis: Penyemprotan volume tinggi: 0.25 ml/l",
+        "price": 42200,
+        "image": "avimax.png"
+    }
+]

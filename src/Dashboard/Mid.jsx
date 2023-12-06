@@ -40,17 +40,17 @@ export default function SimpleThreeColumns() {
           <Mid
             src={pHimg} alt='q'
             title={'Pengendalian Hama'}
-            link="/link-1"
+            link="/kontak"
           />
           <Mid
             src={pktImg} alt='q'
             title={'Penilaian Kesehatan'}
-            link="/ImageDetection"
+            link="/ObjectDetector"
           />
           <Mid
             src={eleImg} alt='q'
             title={'Pupuk dan Perbaikan Tanaman'}
-            link="/link-3"
+            link="/product"
           />
         </SimpleGrid>
         <div style={verticalineStyle}></div>

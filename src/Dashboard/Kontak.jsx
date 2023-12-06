@@ -220,7 +220,7 @@ const Kontak = () => {
               CODDY
             </div>
             <p style={{textAlign: 'left'}}>
-              Lokasi:123 Jalan Padjajaran, Indonesia 12345<br />
+              Lokasi:123 Jalan Jendral Sudirman, Indonesia 12345<br />
               Email: info@coddy.com<br />
               Phone: 555-555-5555<br />
               Fax: 555-555-5555<br />
