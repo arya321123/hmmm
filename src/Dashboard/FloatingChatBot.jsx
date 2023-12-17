@@ -2,14 +2,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, {useState, useRef, useEffect} from 'react';
-import {
-  Box,
-  Input,
-  Button,
-  ChakraProvider,
-  Container,
-  Flex,
-} from '@chakra-ui/react';
+import {Box, Input, Button, ChakraProvider, Container, Flex} from '@chakra-ui/react';
 
 const ChatMessage = ({type, message}) => (
   <Box
@@ -30,9 +23,36 @@ const FloatingChatbot = () => {
   const [message, setMessage] = useState('');
   const [chatHistory, setChatHistory] = useState([]);
   const [isMinimized, setIsMinimized] = useState(true);
+  const [suggestions, setSuggestions] = useState([]);
+
+  const fetchSuggestions = (input) => {
+    fetch('/dataset_chatbot.json')
+        .then((response) => response.json())
+        .then((data) => {
+          const allIntents = data.intents || [];
+          const allInputs = allIntents
+              .flatMap((intent) => intent.input.map((input) => input.toLowerCase()))
+              .filter((inputItem) => inputItem.includes(input.toLowerCase()));
+
+          const uniqueSuggestions = Array.from(new Set(allInputs));
+          setSuggestions(uniqueSuggestions);
+        })
+        .catch((error) => {
+          console.error('Error fetching suggestions: ', error);
+        });
+  };
 
   const handleInputChange = (event) => {
-    setMessage(event.target.value);
+    const inputValue = event.target.value;
+    setMessage(inputValue);
+
+    fetchSuggestions(inputValue);
+  };
+
+
+  const handleSuggestionClick = (suggestion) => {
+    setMessage(suggestion);
+    setSuggestions([]);
   };
 
   const handleInputKeyDown = (event) => {
@@ -46,14 +66,14 @@ const FloatingChatbot = () => {
       return;
     }
 
-    const newChatHistory = [...chatHistory, {type: 'user', message}];
-
     fetch('/dataset_chatbot.json')
         .then((response) => response.json())
         .then((data) => {
           const matchedIntent = data.intents.find((intent) =>
-            intent.input.includes(message.toLowerCase()),
+            intent.input.some((input) => message.toLowerCase().includes(input.toLowerCase())),
           );
+
+          const newChatHistory = [...chatHistory, {type: 'user', message}];
 
           const botResponse = matchedIntent ?
           matchedIntent.responses[Math.floor(Math.random() * matchedIntent.responses.length)] :
@@ -70,6 +90,7 @@ const FloatingChatbot = () => {
           console.error('Error fetching data: ', error);
         });
   };
+
 
   const toggleMinimize = () => {
     setIsMinimized((prevState) => !prevState);
@@ -170,6 +191,17 @@ const FloatingChatbot = () => {
               Send
             </Button>
           </Flex>
+          {suggestions.length > 0 && (
+            <Box padding="10px" borderBottom="1px solid #ccc">
+              <ul>
+                {suggestions.map((suggestion, index) => (
+                  <li key={index} onClick={() => handleSuggestionClick(suggestion)}>
+                    {suggestion}
+                  </li>
+                ))}
+              </ul>
+            </Box>
+          )}
         </Container>
       )}
     </ChakraProvider>
